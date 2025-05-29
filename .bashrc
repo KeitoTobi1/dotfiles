@@ -84,10 +84,6 @@ export SCM_CHECK=true
 source "$BASH_IT"/bash_it.sh
 source ~/.local/share/blesh/ble.sh
 
-# bun
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
-
 # dotnet
 export DOTNET_ROOT="$HOME/.dotnet"
 export PATH="$DOTNET_ROOT:$PATH"

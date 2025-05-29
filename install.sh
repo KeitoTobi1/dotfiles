@@ -9,7 +9,11 @@ git clone --recursive --depth 1 --shallow-submodules https://github.com/akinomyo
 make -C ble.sh install PREFIX=~/.local
 echo 'source ~/.local/share/blesh/ble.sh' >> ~/.bashrc
 
-# .bashrc modifications
+# Install .NET SDK
+
+curl -sSL https://dot.net/v1/dotnet-install.sh | bash /dev/stdin --channel 8.0
+
+# .bashrc modifications & dotnet setting
 cp .bashrc ~/.bashrc
 source ~/.bashrc
 sed s/username/$USER/ ~/.bashrc > ~/.bashrc.tmp && mv ~/.bashrc.tmp ~/.bashrc
@@ -28,10 +32,6 @@ curl -fsSL https://bun.sh/install | bash
 # Install volta
 
 curl https://get.volta.sh | bash
-
-# Install .NET SDK
-
-curl -sSL https://dot.net/v1/dotnet-install.sh | bash /dev/stdin --channel 8.0
 
 # Install miniforge3
 
