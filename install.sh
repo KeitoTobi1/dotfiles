@@ -9,17 +9,16 @@ git clone --recursive --depth 1 --shallow-submodules https://github.com/akinomyo
 make -C ble.sh install PREFIX=~/.local
 echo 'source ~/.local/share/blesh/ble.sh' >> ~/.bashrc
 
+# .bashrc modifications
+cp .bashrc ~/.bashrc
+source ~/.bashrc
+
 # Install Vlang
 
 git clone --depth=1 https://github.com/vlang/v ~/v
 cd ~/v
 make
 sudo ./v symlink
-
-# Install miniforge3
-
-curl -L -O "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-$(uname)-$(uname -m).sh"
-bash Miniforge3-$(uname)-$(uname -m).sh
 
 # Install bun
 
@@ -33,14 +32,11 @@ curl https://get.volta.sh | bash
 
 curl -sSL https://dot.net/v1/dotnet-install.sh | bash /dev/stdin --channel 8.0
 
-# Add .NET to PATH
-export DOTNET_ROOT="$HOME/.dotnet"
-export PATH="$DOTNET_ROOT:$PATH"
+# Install miniforge3
+
+curl -L -O "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-$(uname)-$(uname -m).sh"
+bash Miniforge3-$(uname)-$(uname -m).sh
 
 # Install juliaup
 
 curl -fsSL https://install.julialang.org | sh
-
-# .bashrc modifications
-cp .bashrc ~/.bashrc
-source ~/.bashrc

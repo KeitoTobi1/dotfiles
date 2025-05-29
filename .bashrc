@@ -84,41 +84,8 @@ export SCM_CHECK=true
 source "$BASH_IT"/bash_it.sh
 source ~/.local/share/blesh/ble.sh
 
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$("/home/${USER}/miniforge3/bin/conda" 'shell.bash' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/home/$USER/miniforge3/etc/profile.d/conda.sh" ]; then
-        . "/home/$USER/miniforge3/etc/profile.d/conda.sh"
-    else
-        export PATH="/home/$USER/miniforge3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-
-
-# >>> juliaup initialize >>>
-
-# !! Contents within this block are managed by juliaup !!
-
-case ":$PATH:" in
-    *:/home/$USER/.juliaup/bin:*)
-        ;;
-
-    *)
-        export PATH=/home/$USER/.juliaup/bin${PATH:+:${PATH}}
-        ;;
-esac
-
-# <<< juliaup initialize <<<
-
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
-export VOLTA_HOME="$HOME/.volta"
-export PATH="$VOLTA_HOME/bin:$PATH"
 export DOTNET_ROOT="$HOME/.dotnet"
 export PATH="$DOTNET_ROOT:$PATH"
