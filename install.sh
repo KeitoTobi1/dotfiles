@@ -30,6 +30,7 @@ curl -fsSL https://bun.sh/install | bash
 curl https://get.volta.sh | bash
 
 # Install .NET SDK
+
 curl -sSL https://dot.net/v1/dotnet-install.sh | bash /dev/stdin --channel 8.0
 
 # Add .NET to PATH
