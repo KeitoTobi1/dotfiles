@@ -12,6 +12,7 @@ echo 'source ~/.local/share/blesh/ble.sh' >> ~/.bashrc
 # .bashrc modifications
 cp .bashrc ~/.bashrc
 source ~/.bashrc
+sed s/username/$USER/ ~/.bashrc > ~/.bashrc.tmp && mv ~/.bashrc.tmp ~/.bashrc
 
 # Install Vlang
 

@@ -7,7 +7,7 @@ case $- in
 esac
 
 # Path to the bash it configuration
-export BASH_IT="/home/$USER/.bash_it"
+export BASH_IT="/home/username/.bash_it"
 
 # Lock and Load a custom theme file.
 # Leave empty to disable theming.
@@ -87,5 +87,7 @@ source ~/.local/share/blesh/ble.sh
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
+# dotnet
 export DOTNET_ROOT="$HOME/.dotnet"
 export PATH="$DOTNET_ROOT:$PATH"
